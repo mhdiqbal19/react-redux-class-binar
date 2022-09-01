@@ -1,0 +1,6 @@
+const TYPES = {
+    FETCH_DATA: "FETCH_DATA",
+    POST_REGISTRASI: "POST_REGISTRASI"
+}
+
+export default TYPES
