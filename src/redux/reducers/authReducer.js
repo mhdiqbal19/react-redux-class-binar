@@ -2,14 +2,20 @@ import TYPES from "../types"
 
 const initialState = {
     token: "",
+    tokenLogin: "",
 }
 
-const dataRegistrasi = (state = initialState, action) => {
+const dataAuth = (state = initialState, action) => {
     switch (action.type) {
         case TYPES.POST_REGISTRASI:
             return{
                 ...state,
                 token: action.payload
+            }
+        case TYPES.POST_LOGIN:
+            return{
+                ...state,
+                tokenLogin: action.payload
             }
     
         default:
@@ -17,4 +23,4 @@ const dataRegistrasi = (state = initialState, action) => {
     }
 }
 
-export default dataRegistrasi
+export default dataAuth

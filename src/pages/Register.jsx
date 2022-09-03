@@ -6,8 +6,8 @@ const Register = () => {
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
     const dispatch = useDispatch()
-    const {dataReg} = useSelector((state) => state)
-    console.log("ini data regis", dataReg.token);
+    const {dataAuth} = useSelector((state) => state)
+
         
     const handleEmail = (e) => {
         setEmail(e.target.value)
@@ -25,8 +25,6 @@ const Register = () => {
         dispatch(getRegister(email, password))
     }
 
-    console.log();
-
   return (
     <div>
         <h2>Register</h2>
@@ -38,7 +36,7 @@ const Register = () => {
         <br />
         <button onClick={handleSubmit}>Submit</button>
         {
-            !!dataReg.token.length && <p>Login Berhasil</p>
+            !!dataAuth.token.length && <p>Register Berhasil</p>
         }
     </div>
   )
